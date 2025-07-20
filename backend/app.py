@@ -410,7 +410,8 @@ def initialize_database():
 def ensure_initialized():
     global _initialized
     if not _initialized:
-        initialize_database()
+        with app.app_context():
+            initialize_database()
         _initialized = True
 
 if __name__ == '__main__':
