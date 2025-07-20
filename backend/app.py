@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from datetime import datetime, timedelta
 
-app = Flask(__name__)
+app = Flask(__name__, instance_path='/tmp')
 app.config['SECRET_KEY'] = 'restaurant-booking-secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///restaurant_booking.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
