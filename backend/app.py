@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'restaurant-booking-secret-key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///restaurant_booking.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///restaurant_booking.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.config['JWT_SECRET_KEY'] = 'jwt-secret-key-restaurant'
 # app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=24)
@@ -18,6 +18,10 @@ db = SQLAlchemy(app)
 # jwt = JWTManager(app)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
+
+# Create upload folder (same as reference project)
+UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static', 'uploads')
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Database Models
 class User(db.Model):
