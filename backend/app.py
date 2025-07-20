@@ -19,9 +19,7 @@ db = SQLAlchemy(app)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Create upload folder (same as reference project)
-UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static', 'uploads')
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 
 # Database Models
 class User(db.Model):
