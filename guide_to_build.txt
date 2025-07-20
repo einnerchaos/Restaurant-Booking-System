@@ -1,0 +1,75 @@
+RESTAURANT BOOKING SYSTEM - BUILD GUIDE
+
+PROJECT OVERVIEW:
+Real-time restaurant booking system with table management, customer reservations, kitchen notifications, and payment integration.
+
+TECH STACK:
+- Mobile App: React Native with Expo
+- Backend: Python Flask
+- Database: SQLite
+- Real-time: WebSocket
+- Authentication: JWT
+- UI Framework: React Native Paper
+
+KEY FEATURES TO IMPLEMENT:
+1. Customer Mobile App
+   - Restaurant browsing and search
+   - Table reservation with time slots
+   - Menu viewing and ordering
+   - Payment processing
+   - Reservation history
+
+2. Restaurant Admin Panel
+   - Table management dashboard
+   - Reservation calendar view
+   - Kitchen order notifications
+   - Customer management
+   - Sales analytics
+
+3. Kitchen Display System
+   - Real-time order notifications
+   - Order status updates
+   - Preparation time tracking
+   - Priority queue management
+
+4. Database Schema:
+   - Restaurants (id, name, address, cuisine, tables)
+   - Tables (id, restaurant_id, capacity, status)
+   - Reservations (id, table_id, customer_id, date, time, guests, status)
+   - Orders (id, reservation_id, items, total, status, created_at)
+   - Menu_items (id, restaurant_id, name, price, category, description)
+
+QUICK BUILD STEPS:
+1. Setup React Native: npx create-expo-app restaurant-booking --template blank-typescript
+2. Setup Python Flask backend: pip install flask flask-cors flask-sqlalchemy
+3. Create restaurant and table management system
+4. Implement reservation booking logic with time conflict detection
+5. Build real-time notifications using WebSocket
+6. Create kitchen display interface
+7. Implement payment integration
+8. Add push notifications for order updates
+9. Create admin dashboard with calendar view
+10. Add search and filter functionality
+
+CRITICAL COMPONENTS:
+- ReservationCalendar with time slot selection
+- TableGrid showing availability
+- KitchenOrderDisplay with real-time updates
+- PaymentForm with multiple payment methods
+- PushNotificationService
+- AdminDashboard with analytics
+
+DEMO SCREENSHOTS NEEDED:
+1. Mobile app - restaurant search
+2. Mobile app - reservation booking
+3. Admin panel - table management
+4. Kitchen display - order notifications
+5. Reservation calendar view
+
+DEPLOYMENT:
+- Mobile App: Expo App Store/Google Play
+- Backend: Railway/Render
+- Database: SQLite (local) + Cloud sync
+- Real-time: WebSocket on same backend
+
+ESTIMATED TIME: 1 day with AI assistance 
