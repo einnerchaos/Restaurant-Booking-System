@@ -9,8 +9,7 @@ import {
   Toolbar,
   IconButton,
   Button,
-  Chip,
-  Alert
+  Chip
 } from '@mui/material';
 import {
   Logout as LogoutIcon,
@@ -128,11 +127,7 @@ function RestaurantView() {
           Table Management
         </Typography>
 
-        {error && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            {error}
-          </Alert>
-        )}
+
 
         {/* Restaurant Selector */}
         <Box sx={{ mb: 3 }}>
