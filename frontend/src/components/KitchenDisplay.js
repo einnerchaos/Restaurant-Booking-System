@@ -64,20 +64,7 @@ function KitchenDisplay() {
     navigate('/');
   };
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'pending':
-        return 'warning';
-      case 'preparing':
-        return 'info';
-      case 'ready':
-        return 'primary';
-      case 'served':
-        return 'success';
-      default:
-        return 'default';
-    }
-  };
+
 
   const getTimeElapsed = (createdAt) => {
     const created = new Date(createdAt);

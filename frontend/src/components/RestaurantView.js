@@ -26,7 +26,7 @@ function RestaurantView() {
   const [tables, setTables] = useState([]);
   const [reservations, setReservations] = useState([]);
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
-  const [error, setError] = useState('');
+
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 

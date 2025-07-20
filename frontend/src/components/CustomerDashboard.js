@@ -23,7 +23,6 @@ import {
 } from '@mui/material';
 import {
   Logout as LogoutIcon,
-  Restaurant as RestaurantIcon,
   Schedule as ScheduleIcon,
   RestaurantMenu as RestaurantMenuIcon
 } from '@mui/icons-material';
